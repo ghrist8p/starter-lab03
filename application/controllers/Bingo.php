@@ -21,4 +21,14 @@ class Bingo extends Application
         
         $this->render();
     }
+    
+    function wisdom()
+    {
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        $source = $this->quotes->get('6');
+        //add data from source into the data array
+        $this->data += $source;
+        
+        $this->render();
+    }
 }
