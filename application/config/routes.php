@@ -40,7 +40,7 @@
 
 $route['sleep'] = 'first/zzz';
 $route['lock/.*'] = 'welcome/shucks';
-$route['show/\d'] = 'first/gimme';
+$route['show/(\d)'] = 'first/gimme/$1';
 $route['dunno'] = 'guess';
 $route['[a-z]{4}/bingo'] = 'bingo';
 $route['comp\d{4}/wisdom'] = 'bingo/wisdom';
