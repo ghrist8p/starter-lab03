@@ -38,4 +38,13 @@ class First extends Application
         $this->render();
     }
     
+    function gimme()
+    {
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        $source = $this->quotes->get('3');
+        //add data from source into the data array
+        $this->data += $source;
+        
+        $this->render();
+    }
 }
